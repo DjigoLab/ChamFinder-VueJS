@@ -1,7 +1,9 @@
 <template lang="html">
 
   <section class="app-header">
-    <h1>header Component</h1>
+    <router-link to="/">Home</router-link>
+    <span>Logo</span>
+    <router-link to="/login">User</router-link>
   </section>
 
 </template>
@@ -30,5 +32,13 @@
 <style scoped >
   .app-header {
 
-  }
+    display: flex;
+    justify-content: space-between;
+    background: #795548;
+    color: #DCEDC8;
+   padding: 15px;}
+   a{
+     color: #DCEDC8;
+   }
+
 </style>

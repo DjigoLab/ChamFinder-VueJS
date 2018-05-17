@@ -1,23 +1,35 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <AppHeader></AppHeader>
     <router-view/>
   </div>
 </template>
 
 <script>
+import AppHeader from "@/components/AppHeader";
 export default {
+  components: { AppHeader },
   name: "App"
 };
 </script>
 
 <style>
+body {
+  padding: 0px;
+  margin: 0px;
+}
+html,
+body,
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  min-height: 100%;
+}
+#app {
+    font-family: "Tillana", cursive;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #212121;
+  background: #8bc34a;
 }
 </style>

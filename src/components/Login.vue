@@ -1,6 +1,6 @@
 <template>
-      <div>
-        {{msg}}
+      <div class="container">
+        {{msg}}{{name}}
         <form action="" method="post">
             <div class="form-field username">
 
@@ -26,8 +26,7 @@
                 <input type="checkbox" name="terms" v-model="accept">
                 <label for="terms">Accept Terms</label>
             </div>
-            <button type="submit">Accept</button>
-        </form>
+
         <p v-if="accept == true">Your name is {{name}}, with the e-mail {{email}}, using a codificated
             password, which is {{password}}, and you have accepted  our terms.
         </p>
@@ -41,6 +40,8 @@
         <p v-else>
             Hey, seems that you wrote your confirmation password wrong...
         </p>
+            <button type="submit">Submit</button>
+        </form>
       </div>
 </template>
 
@@ -49,7 +50,7 @@ export default {
   name: "Login",
   data() {
     return {
-      msg: "Hello, stranger.",
+      msg: "Hello, ",
       name: "Stranger",
       email: "",
       password: "",
@@ -62,10 +63,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.container{
+  padding: 15px;
+}
 form {
         display: flex;
         flex-flow: column;
-        padding: 15px;
+        padding: 10px;
     }
 
     .form-field {
